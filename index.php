@@ -29,7 +29,7 @@
 <!Doctype html>
     <html lang="en">
     
-        <?php include ('templates/header.php'); ?>
+        <?php include 'templates/header.php'; ?>
 
         <h4 class="center grey-text">Pizzas!</h4>
         <div class="container">
@@ -38,6 +38,7 @@
                 <?php foreach($pizzas as $pizza) {?>
                     <div class="col s6 md3">
                         <div class="card z-depth-0">
+                            <img src="img/pizzas.svg" alt="pizzas.svg" class="pizza">
                             <div class="card-content center">
                                 <h4><?php echo htmlspecialchars($pizza['title']); ?></h4>
                                 <ul>
@@ -47,7 +48,8 @@
                                 </ul>
                             </div>
                             <div class="card-action right-align">
-                                <a href="#" class="brand-text">more info</a>
+                                <!--to make the code is to get info on the individual pizza------->
+                                <a href="detail.php?id=<?php echo $pizza['id'] ?>" class="brand-text">more info</a>
                             </div>
                         </div>
                     </div>
